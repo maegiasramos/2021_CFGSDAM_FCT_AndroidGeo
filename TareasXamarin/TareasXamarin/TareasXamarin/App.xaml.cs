@@ -14,7 +14,7 @@ namespace TareasXamarin
 
             DependencyService.Register<MockDataStore>();
             // Asociamos la página principal en la que arrancará la app
-            MainPage = new NavigationPage(new EventListPage());
+            MainPage = new NavigationPage(new Views.TabbedMenu());
         }
 
         // Conexión con base de datos al inicializar app

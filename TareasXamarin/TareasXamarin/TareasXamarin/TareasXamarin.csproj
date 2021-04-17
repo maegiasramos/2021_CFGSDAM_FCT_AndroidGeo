@@ -19,9 +19,15 @@
     <Compile Update="Views\EventPage.xaml.cs">
       <DependentUpon>EventPage.xaml</DependentUpon>
     </Compile>
+    <Compile Update="Views\TabbedMenu.xaml.cs">
+      <DependentUpon>TabbedMenu.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
 
   <ItemGroup>
+    <EmbeddedResource Update="Views\TabbedMenu.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
     <EmbeddedResource Update="Views\UserListPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
