@@ -21,6 +21,12 @@ namespace TareasXamarin
                 // Creamos el directorio especificado en libFolder
                 Directory.CreateDirectory(libFolder);
             }
+            /*else
+            {
+                Directory.Delete(libFolder, true);
+                Directory.CreateDirectory(libFolder);
+            }*/
+
             // En ambos casos devuelve la ruta especificada
             return Path.Combine(libFolder, fileName);
 

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "lJfi6RLDsWMASJ+eRabJRCSTSj3InGTenHL4z2SCPCNEh0hFsrxeVLwE1GtrzhAlRm1LODKHKHd5cdhgZM7OKQ==",
+  "dgSpecHash": "D6vceejGokfJkFZUOeszcOMrnTQ6CBjJ4qxbZtcwMTzwqAT4eQTPBEI53EbVGpABA5kzGWATwZg+/hZHxnrAMw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\ZororoWhite\\Desktop\\TareasXamarin\\TareasXamarin\\TareasXamarin.Android\\TareasXamarin.Android.csproj",
+  "projectFilePath": "C:\\Users\\ZororoWhite\\Desktop\\2021_CFGSDAM_FCT_AndroidGeo\\TareasXamarin\\TareasXamarin\\TareasXamarin.Android\\TareasXamarin.Android.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ZororoWhite\\.nuget\\packages\\sqlite-net-pcl\\1.7.335\\sqlite-net-pcl.1.7.335.nupkg.sha512",
     "C:\\Users\\ZororoWhite\\.nuget\\packages\\sqlitepclraw.bundle_green\\2.0.3\\sqlitepclraw.bundle_green.2.0.3.nupkg.sha512",

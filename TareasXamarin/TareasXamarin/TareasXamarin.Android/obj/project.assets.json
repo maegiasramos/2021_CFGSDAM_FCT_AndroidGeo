@@ -2483,11 +2483,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\ZororoWhite\\Desktop\\TareasXamarin\\TareasXamarin\\TareasXamarin.Android\\TareasXamarin.Android.csproj",
+      "projectUniqueName": "C:\\Users\\ZororoWhite\\Desktop\\2021_CFGSDAM_FCT_AndroidGeo\\TareasXamarin\\TareasXamarin\\TareasXamarin.Android\\TareasXamarin.Android.csproj",
       "projectName": "TareasXamarin.Android",
-      "projectPath": "C:\\Users\\ZororoWhite\\Desktop\\TareasXamarin\\TareasXamarin\\TareasXamarin.Android\\TareasXamarin.Android.csproj",
+      "projectPath": "C:\\Users\\ZororoWhite\\Desktop\\2021_CFGSDAM_FCT_AndroidGeo\\TareasXamarin\\TareasXamarin\\TareasXamarin.Android\\TareasXamarin.Android.csproj",
       "packagesPath": "C:\\Users\\ZororoWhite\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\ZororoWhite\\Desktop\\TareasXamarin\\TareasXamarin\\TareasXamarin.Android\\obj\\",
+      "outputPath": "C:\\Users\\ZororoWhite\\Desktop\\2021_CFGSDAM_FCT_AndroidGeo\\TareasXamarin\\TareasXamarin\\TareasXamarin.Android\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
@@ -2508,8 +2508,8 @@
       "frameworks": {
         "monoandroid11.0": {
           "projectReferences": {
-            "C:\\Users\\ZororoWhite\\Desktop\\TareasXamarin\\TareasXamarin\\TareasXamarin\\TareasXamarin.csproj": {
-              "projectPath": "C:\\Users\\ZororoWhite\\Desktop\\TareasXamarin\\TareasXamarin\\TareasXamarin\\TareasXamarin.csproj"
+            "C:\\Users\\ZororoWhite\\Desktop\\2021_CFGSDAM_FCT_AndroidGeo\\TareasXamarin\\TareasXamarin\\TareasXamarin\\TareasXamarin.csproj": {
+              "projectPath": "C:\\Users\\ZororoWhite\\Desktop\\2021_CFGSDAM_FCT_AndroidGeo\\TareasXamarin\\TareasXamarin\\TareasXamarin\\TareasXamarin.csproj"
             }
           }
         }

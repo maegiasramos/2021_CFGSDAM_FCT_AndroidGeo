@@ -6,7 +6,7 @@ namespace TareasXamarin
     public partial class App : Application
     {
         // Objeto que referencie a la base de datos
-        static UserDatabase userDatabase;
+        static DatabaseCrud userDatabase;
 
         public App()
         {
@@ -14,17 +14,17 @@ namespace TareasXamarin
 
             DependencyService.Register<MockDataStore>();
             // Asociamos la página principal en la que arrancará la app
-            MainPage = new NavigationPage(new UserListPage());
+            MainPage = new NavigationPage(new EventListPage());
         }
 
         // Conexión con base de datos al inicializar app
-        public static UserDatabase UserDatabase
+        public static DatabaseCrud UserDatabase
         {
             get
             {
                 if(userDatabase == null)
                 {
-                    userDatabase = new UserDatabase(DependencyService.Get<ILocalFileHelper>().GetLocalFilePath("Database.db3"));
+                    userDatabase = new DatabaseCrud(DependencyService.Get<ILocalFileHelper>().GetLocalFilePath("Database.db3"));
                 }
                 return userDatabase;
             }

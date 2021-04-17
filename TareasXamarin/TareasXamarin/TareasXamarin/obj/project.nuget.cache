@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "hvtMgiWFAjpIJT4LyEX5vF8nnV7Uvb9vU7tcm6Ok9zcE0Tyh+Lnp6z/pcLu7RtmlSnpZ69cc0RCA1TiqjVF7iA==",
+  "dgSpecHash": "xVfx8bIQbJfBKfQC1uuetOTkfPMw2t99B+s4t0xQoiv732WQnavtejK46eAUmKoAk4N9IWfWlxPog9FHaAae8A==",
   "success": true,
-  "projectFilePath": "C:\\Users\\ZororoWhite\\Desktop\\TareasXamarin\\TareasXamarin\\TareasXamarin\\TareasXamarin.csproj",
+  "projectFilePath": "C:\\Users\\ZororoWhite\\Desktop\\2021_CFGSDAM_FCT_AndroidGeo\\TareasXamarin\\TareasXamarin\\TareasXamarin\\TareasXamarin.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ZororoWhite\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
     "C:\\Users\\ZororoWhite\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",

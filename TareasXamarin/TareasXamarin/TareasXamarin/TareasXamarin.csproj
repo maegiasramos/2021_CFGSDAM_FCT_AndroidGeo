@@ -13,10 +13,19 @@
   </ItemGroup>
 
   <ItemGroup>
-    <EmbeddedResource Update="UserListPage.xaml">
+    <Compile Update="Views\EventListPage.xaml.cs">
+      <DependentUpon>EventListPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\EventPage.xaml.cs">
+      <DependentUpon>EventPage.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Views\UserListPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="UserPage.xaml">
+    <EmbeddedResource Update="Views\UserPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
   </ItemGroup>

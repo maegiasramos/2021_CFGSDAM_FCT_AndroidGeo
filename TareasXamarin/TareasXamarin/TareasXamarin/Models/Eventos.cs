@@ -25,8 +25,11 @@ namespace TareasXamarin.Models
             set;
         }
 
-        /*[ForeignKey(typeof(User)]
-        public int OwnerID { get; set; }*/
+        public int OwnerID 
+        { 
+            get; 
+            set; 
+        }
 
         public string Visibility
         {

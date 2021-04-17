@@ -940,11 +940,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\ZororoWhite\\Desktop\\TareasXamarin\\TareasXamarin\\TareasXamarin\\TareasXamarin.csproj",
+      "projectUniqueName": "C:\\Users\\ZororoWhite\\Desktop\\2021_CFGSDAM_FCT_AndroidGeo\\TareasXamarin\\TareasXamarin\\TareasXamarin\\TareasXamarin.csproj",
       "projectName": "TareasXamarin",
-      "projectPath": "C:\\Users\\ZororoWhite\\Desktop\\TareasXamarin\\TareasXamarin\\TareasXamarin\\TareasXamarin.csproj",
+      "projectPath": "C:\\Users\\ZororoWhite\\Desktop\\2021_CFGSDAM_FCT_AndroidGeo\\TareasXamarin\\TareasXamarin\\TareasXamarin\\TareasXamarin.csproj",
       "packagesPath": "C:\\Users\\ZororoWhite\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\ZororoWhite\\Desktop\\TareasXamarin\\TareasXamarin\\TareasXamarin\\obj\\",
+      "outputPath": "C:\\Users\\ZororoWhite\\Desktop\\2021_CFGSDAM_FCT_AndroidGeo\\TareasXamarin\\TareasXamarin\\TareasXamarin\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
