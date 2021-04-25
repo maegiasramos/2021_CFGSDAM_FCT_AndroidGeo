@@ -25,12 +25,23 @@ namespace TareasXamarin
             // Guarda el usuario en la base de datos
             await App.UserDatabase.SaveUserAsync(personItem);
             // Navega de nuevo a la ventana de lista de usuarios
-            await Navigation.PopAsync(); 
+            await Navigation.PopAsync();
         }
 
         // Método asociado al botón de cancelar
         async void Cancel_Clicked(object sender, EventArgs e)
         {
+            await Navigation.PopAsync();
+        }
+
+        // Método asociado al botón de eliminar usuario
+        async void Delete_Clicked(object sender, EventArgs e)
+        {
+            // Crea un objeto de tipo User y le pasa los valores introducidos
+            var personItem = (Models.User)BindingContext;
+            // Guarda el usuario en la base de datos
+            await App.UserDatabase.DeleteUserAsync(personItem);
+            // Navega de nuevo a la ventana de lista de usuarios
             await Navigation.PopAsync();
         }
     }

@@ -6,7 +6,7 @@
         <ListView x:Name="EventListView" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" ItemSelected="Event_ItemSelected">
             <ListView.ItemTemplate>
                 <DataTemplate>
-                    <TextCell Text="{Binding EventName}" Detail="{Binding EventDescription}"/>
+                    <TextCell Text="{Binding EventName}" Detail="{Binding EventDescription}, {Binding Visibility}"/>
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>

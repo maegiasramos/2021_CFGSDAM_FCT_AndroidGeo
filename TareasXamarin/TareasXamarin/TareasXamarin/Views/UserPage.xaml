@@ -15,6 +15,7 @@
                 <Entry Text="{Binding UserPassword}" Grid.Row="1" Grid.Column="1"/>
             </Grid>
             <Button Text="Guardar" HorizontalOptions="FillAndExpand" BackgroundColor="CornflowerBlue" TextColor="GhostWhite" Clicked="Save_Clicked"/>
+            <Button Text="Eliminar" HorizontalOptions="FillAndExpand" BackgroundColor="CornflowerBlue" TextColor="GhostWhite" Clicked="Delete_Clicked"/>
             <Button Text="Cancelar" HorizontalOptions="FillAndExpand" BackgroundColor="CornflowerBlue" TextColor="GhostWhite" Clicked="Cancel_Clicked"/>
         </StackLayout>
     </ContentPage.Content>

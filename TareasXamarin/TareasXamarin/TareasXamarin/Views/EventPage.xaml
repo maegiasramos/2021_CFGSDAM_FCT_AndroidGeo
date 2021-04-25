@@ -11,12 +11,18 @@
                 </Grid.ColumnDefinitions>
                 <Label Text="Nombre" Grid.Row="0" Grid.Column="0" HorizontalOptions="Start" VerticalOptions="Center"></Label>
                 <Entry Text="{Binding EventName}" Grid.Row="0" Grid.Column="1"/>
+                
                 <Label Text="Descripción" Grid.Row="1" Grid.Column="0" HorizontalOptions="Start" VerticalOptions="Center"></Label>
-                <Entry Text="{Binding EventDescription}" Grid.Row="1" Grid.Column="1"/>
+                <Editor Text="{Binding EventDescription}" Grid.Row="1" Grid.Column="1" VerticalOptions="Center" AutoSize="TextChanges"/>
+                
                 <Label Text="Visibilidad" Grid.Row="2" Grid.Column="0" HorizontalOptions="Start" VerticalOptions="Center"></Label>
-                <Entry Text="{Binding Visibility}" Grid.Row="2" Grid.Column="1"/>
+                <StackLayout Grid.Row="2" Grid.Column="1" HorizontalOptions="Center" VerticalOptions="Center">
+                    <RadioButton Content="Pública" GroupName="visibility" IsChecked="{Binding Visibility}"/>
+                    <RadioButton Content="Privada" GroupName="visibility" IsChecked="{Binding Visibility}"/>
+                </StackLayout>
             </Grid>
             <Button Text="Guardar" HorizontalOptions="FillAndExpand" BackgroundColor="CornflowerBlue" TextColor="GhostWhite" Clicked="Save_Clicked"/>
+            <Button Text="Eliminar" HorizontalOptions="FillAndExpand" BackgroundColor="CornflowerBlue" TextColor="GhostWhite" Clicked="Delete_Clicked"/>
             <Button Text="Cancelar" HorizontalOptions="FillAndExpand" BackgroundColor="CornflowerBlue" TextColor="GhostWhite" Clicked="Cancel_Clicked"/>
         </StackLayout>
     </ContentPage.Content>

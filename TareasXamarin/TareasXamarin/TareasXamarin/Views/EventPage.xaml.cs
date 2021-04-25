@@ -33,5 +33,16 @@ namespace TareasXamarin
         {
             await Navigation.PopAsync();
         }
+
+        // Método asociado al botón de eliminar evento
+        async void Delete_Clicked(object sender, EventArgs e)
+        {
+            // Crea un objeto de tipo User y le pasa los valores introducidos
+            var eventItem = (Models.Eventos)BindingContext;
+            // Guarda el usuario en la base de datos
+            await App.UserDatabase.DeleteEventAsync(eventItem);
+            // Navega de nuevo a la ventana de lista de usuarios
+            await Navigation.PopAsync();
+        }
     }
 }

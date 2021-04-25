@@ -15,8 +15,8 @@ namespace TareasXamarin.Views
         public TabbedMenu()
         {
             // Añadimos las páginas al TabbedMenu
-            this.Children.Add(new LoginPage() { Title = "Iniciar sesión" });
             this.Children.Add(new UserListPage() { Title = "Lista de usuarios" });
+            this.Children.Add(new EventListPage() { Title = "Lista de tareas" });
             InitializeComponent();
         }
     }
