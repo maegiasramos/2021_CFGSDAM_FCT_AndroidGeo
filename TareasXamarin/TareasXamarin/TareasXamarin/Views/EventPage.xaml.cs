@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using Xamarin.Essentials;
 
 namespace TareasXamarin
 {
@@ -43,6 +44,51 @@ namespace TareasXamarin
             await App.UserDatabase.DeleteEventAsync(eventItem);
             // Navega de nuevo a la ventana de lista de usuarios
             await Navigation.PopAsync();
+        }
+
+        // Método que obtiene las coordenadas de un punto a partir del nombre de la ubicación con Geocoding
+        async void Geocoding_Method(object sender, EventArgs e)
+        {
+            try
+            {
+                var result = await Geocoding.GetLocationsAsync(LocationName.Text);
+                if (result.Any())
+                    LocationName.Text = $"{result.FirstOrDefault()?.Latitude}, {result.FirstOrDefault()?.Longitude}";
+            }
+            catch(FeatureNotSupportedException notsupportedex)
+            {
+                // TODO Añadir Toast que indique que esta función no está disponible en este dispositivo 
+            }
+            catch(Exception ex)
+            {
+                // TODO Añadir Toast que indique que algo salió mal
+            }
+        }
+
+        // Método que obtiene el nombre de la ubicación a partir de las coordenadas de un punto con Geocoding
+        async void ReverseGeocoding_Method(object sender, EventArgs e)
+        {
+            try
+            {
+                double lat;
+                double lng;
+
+                lat = Convert.ToDouble(LocationName.Text.Split(',')[0]);
+                lng = Convert.ToDouble(LocationName.Text.Split(',')[1]);
+
+                var result = await Geocoding.GetPlacemarksAsync(lat, lng);
+
+                if (result.Any())
+                    LocationName.Text = result.FirstOrDefault()?.FeatureName;
+            }
+            catch (FeatureNotSupportedException notsupportedex)
+            {
+                // TODO Añadir Toast que indique que esta función no está disponible en este dispositivo 
+            }
+            catch (Exception ex)
+            {
+                // TODO Añadir Toast que indique que algo salió mal
+            }
         }
     }
 }

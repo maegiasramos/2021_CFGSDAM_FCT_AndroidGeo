@@ -1,7 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="TareasXamarin.EventPage">
+             x:Class="TareasXamarin.EventPage"
+             Title="Modificar evento">
     <ContentPage.Content>
         <StackLayout Padding="10" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
             <Grid>
@@ -9,21 +10,29 @@
                     <ColumnDefinition Width="Auto"/>
                     <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
-                <Label Text="Nombre" Grid.Row="0" Grid.Column="0" HorizontalOptions="Start" VerticalOptions="Center"></Label>
+                <Label Text="Nombre:" Grid.Row="0" Grid.Column="0" HorizontalOptions="Start" VerticalOptions="Center"></Label>
                 <Entry Text="{Binding EventName}" Grid.Row="0" Grid.Column="1"/>
                 
-                <Label Text="Descripción" Grid.Row="1" Grid.Column="0" HorizontalOptions="Start" VerticalOptions="Center"></Label>
-                <Editor Text="{Binding EventDescription}" Grid.Row="1" Grid.Column="1" VerticalOptions="Center" AutoSize="TextChanges"/>
-                
-                <Label Text="Visibilidad" Grid.Row="2" Grid.Column="0" HorizontalOptions="Start" VerticalOptions="Center"></Label>
-                <StackLayout Grid.Row="2" Grid.Column="1" HorizontalOptions="Center" VerticalOptions="Center">
+                <Label Text="Descripción:" Grid.Row="1" Grid.Column="0" HorizontalOptions="Start" VerticalOptions="Center"></Label>
+                <Editor Text="{Binding EventDescription}" Grid.Row="1" Grid.Column="1" VerticalOptions="CenterAndExpand" AutoSize="TextChanges"/>
+
+                <Label Text="ID Propietario:" Grid.Row="2" Grid.Column="0" HorizontalOptions="Start" VerticalOptions="Center"></Label>
+                <Label Text="{Binding OwnerID}" Grid.Row="2" Grid.Column="1" HorizontalOptions="Center" VerticalOptions="Center"></Label>
+
+                <Label Text="Visibilidad:" Grid.Row="3" Grid.Column="0" HorizontalOptions="Start" VerticalOptions="Center"></Label>
+                <StackLayout Grid.Row="3" Grid.Column="1" HorizontalOptions="Center" VerticalOptions="Center">
                     <RadioButton Content="Pública" GroupName="visibility" IsChecked="{Binding Visibility}"/>
                     <RadioButton Content="Privada" GroupName="visibility" IsChecked="{Binding Visibility}"/>
                 </StackLayout>
+
+                <Label Text="Nombre ubicación:" Grid.Row="4" Grid.Column="0" HorizontalOptions="Start" VerticalOptions="Center"></Label>
+                <Entry x:Name="LocationName" Text="{Binding Coordinates}" Grid.Row="4" Grid.Column="1"/>
             </Grid>
             <Button Text="Guardar" HorizontalOptions="FillAndExpand" BackgroundColor="CornflowerBlue" TextColor="GhostWhite" Clicked="Save_Clicked"/>
             <Button Text="Eliminar" HorizontalOptions="FillAndExpand" BackgroundColor="CornflowerBlue" TextColor="GhostWhite" Clicked="Delete_Clicked"/>
             <Button Text="Cancelar" HorizontalOptions="FillAndExpand" BackgroundColor="CornflowerBlue" TextColor="GhostWhite" Clicked="Cancel_Clicked"/>
+            <Button Text="Convertir a coordenadas" HorizontalOptions="FillAndExpand" BackgroundColor="CornflowerBlue" TextColor="GhostWhite" Clicked="Geocoding_Method"/>
+            <Button Text="Convertir a nombre" HorizontalOptions="FillAndExpand" BackgroundColor="CornflowerBlue" TextColor="GhostWhite" Clicked="ReverseGeocoding_Method"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
