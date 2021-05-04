@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "xVfx8bIQbJfBKfQC1uuetOTkfPMw2t99B+s4t0xQoiv732WQnavtejK46eAUmKoAk4N9IWfWlxPog9FHaAae8A==",
+  "dgSpecHash": "LuW6QqHaAJ8KGoNxzUj8rA2JsqsAA1GYFirc03OxD25yrZ2seUZoH898b/HAhNqOVk7tu2rCRYZfWlRryHtgXQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\ZororoWhite\\Desktop\\2021_CFGSDAM_FCT_AndroidGeo\\TareasXamarin\\TareasXamarin\\TareasXamarin\\TareasXamarin.csproj",
   "expectedPackageFiles": [
@@ -17,7 +17,8 @@
     "C:\\Users\\ZororoWhite\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
     "C:\\Users\\ZororoWhite\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\4.5.2\\system.runtime.compilerservices.unsafe.4.5.2.nupkg.sha512",
     "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\xamarin.essentials\\1.6.1\\xamarin.essentials.1.6.1.nupkg.sha512",
-    "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\xamarin.forms\\5.0.0.2012\\xamarin.forms.5.0.0.2012.nupkg.sha512"
+    "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\xamarin.forms\\5.0.0.2012\\xamarin.forms.5.0.0.2012.nupkg.sha512",
+    "C:\\Users\\ZororoWhite\\.nuget\\packages\\xamarin.forms.maps\\5.0.0.2012\\xamarin.forms.maps.5.0.0.2012.nupkg.sha512"
   ],
   "logs": []
 }

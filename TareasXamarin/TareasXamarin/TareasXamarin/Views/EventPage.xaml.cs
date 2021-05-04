@@ -90,5 +90,10 @@ namespace TareasXamarin
                 // TODO Añadir Toast que indique que algo salió mal
             }
         }
+
+        async void ViewMap(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new Views.MapView());
+        }
     }
 }

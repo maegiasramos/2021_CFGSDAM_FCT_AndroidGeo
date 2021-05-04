@@ -62,3 +62,4 @@ C:\Users\ZororoWhite\Desktop\2021_CFGSDAM_FCT_AndroidGeo\TareasXamarin\TareasXam
 C:\Users\ZororoWhite\Desktop\2021_CFGSDAM_FCT_AndroidGeo\TareasXamarin\TareasXamarin\TareasXamarin\bin\Debug\netstandard2.0\TareasXamarin.pdb
 C:\Users\ZororoWhite\Desktop\2021_CFGSDAM_FCT_AndroidGeo\TareasXamarin\TareasXamarin\TareasXamarin\obj\Debug\netstandard2.0\XamlC.stamp
 C:\Users\ZororoWhite\Desktop\2021_CFGSDAM_FCT_AndroidGeo\TareasXamarin\TareasXamarin\TareasXamarin\obj\Debug\netstandard2.0\Views\TabbedMenu.xaml.g.cs
+C:\Users\ZororoWhite\Desktop\2021_CFGSDAM_FCT_AndroidGeo\TareasXamarin\TareasXamarin\TareasXamarin\obj\Debug\netstandard2.0\Views\MapView.xaml.g.cs

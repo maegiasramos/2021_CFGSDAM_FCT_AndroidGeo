@@ -15,9 +15,9 @@ namespace TareasXamarin.Views
         }
 
         // Método que se llamará al pulsar el botón
-        private void LoginButton(object sender, EventArgs e)
+        async void LoginButton(object sender, EventArgs e)
         {
-            LoginConfirmAsync((SelectedItemChangedEventArgs)e);
+            await LoginConfirmAsync((SelectedItemChangedEventArgs)e);
         }
 
         // Método que cambiará de página y comprobará si los datos de login son correctos (TODO)
