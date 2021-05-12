@@ -23,12 +23,12 @@ namespace TareasXamarin.Views
         {
             base.OnAppearing();
             // Guardamos nuestras coordenadas en un objeto tipo Position de Xamarin.Forms.Maps
-            Position pos = new Position(40.5164475, -3.7345538);
+            Position pos = new Position((double)Application.Current.Properties["Latitude"], (double)Application.Current.Properties["Longitude"]);
             // Creamos un nuevo "Pin" (marcador) para mostrar el lugar de la ubicación señalado en el mapa
             Pin pin = new Pin
             {
                 Position = pos,
-                Label = "Nombre Ubicación",
+                Label = Application.Current.Properties["Location"].ToString(),
                 Type = PinType.Place
             };
             // Añadimos el "Pin" a la lista de marcadores que debe mostrar el elemento mapa

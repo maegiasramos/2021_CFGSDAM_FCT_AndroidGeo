@@ -14,10 +14,10 @@ namespace TareasXamarin.Views
     {
         public TabbedMenu()
         {
+            InitializeComponent();
             // Añadimos las páginas al TabbedMenu
             this.Children.Add(new UserListPage() { Title = "Lista de usuarios" });
             this.Children.Add(new EventListPage() { Title = "Lista de tareas" });
-            InitializeComponent();
         }
     }
 }

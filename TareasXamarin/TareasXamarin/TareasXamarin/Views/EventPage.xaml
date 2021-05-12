@@ -28,11 +28,10 @@
                 <Label Text="Nombre ubicación:" Grid.Row="4" Grid.Column="0" HorizontalOptions="Start" VerticalOptions="Center"></Label>
                 <Entry x:Name="LocationName" Text="{Binding Coordinates}" Grid.Row="4" Grid.Column="1"/>
             </Grid>
-            <Button Text="Ver ubicación en mapa" HorizontalOptions="FillAndExpand" BackgroundColor="CornflowerBlue" TextColor="GhostWhite" Clicked="ViewMap"/>
+            <Button Text="Ver ubicación en mapa" HorizontalOptions="FillAndExpand" BackgroundColor="CornflowerBlue" TextColor="GhostWhite" Clicked="Geocoding_Method"/>
             <Button Text="Guardar" HorizontalOptions="FillAndExpand" BackgroundColor="CornflowerBlue" TextColor="GhostWhite" Clicked="Save_Clicked"/>
             <Button Text="Eliminar" HorizontalOptions="FillAndExpand" BackgroundColor="CornflowerBlue" TextColor="GhostWhite" Clicked="Delete_Clicked"/>
             <Button Text="Cancelar" HorizontalOptions="FillAndExpand" BackgroundColor="CornflowerBlue" TextColor="GhostWhite" Clicked="Cancel_Clicked"/>
-            <Button Text="Convertir a coordenadas" HorizontalOptions="FillAndExpand" BackgroundColor="CornflowerBlue" TextColor="GhostWhite" Clicked="Geocoding_Method"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

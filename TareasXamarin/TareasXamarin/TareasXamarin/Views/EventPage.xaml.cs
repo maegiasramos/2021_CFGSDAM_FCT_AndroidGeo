@@ -53,7 +53,14 @@ namespace TareasXamarin
             {
                 var result = await Geocoding.GetLocationsAsync(LocationName.Text);
                 if (result.Any())
-                    LocationName.Text = $"{result.FirstOrDefault()?.Latitude}, {result.FirstOrDefault()?.Longitude}";
+                {
+                    Application.Current.Properties["Location"] = LocationName.Text;
+                    Application.Current.Properties["Latitude"] = result.FirstOrDefault()?.Latitude;
+                    Application.Current.Properties["Longitude"] = result.FirstOrDefault()?.Longitude;
+                    // En caso de que no haya habido errores muestra la ubicación en el mapa.
+                    await Navigation.PushAsync(new Views.MapView());
+                }
+
             }
             catch(FeatureNotSupportedException notsupportedex)
             {
@@ -89,11 +96,6 @@ namespace TareasXamarin
             {
                 // TODO Añadir Toast que indique que algo salió mal
             }
-        }
-
-        async void ViewMap(object sender, EventArgs e)
-        {
-            await Navigation.PushAsync(new Views.MapView());
         }
     }
 }

@@ -24,18 +24,17 @@ namespace TareasXamarin
 
             myToolbarItem.Clicked += async (sender, e) =>
             {
-                await Navigation.PushAsync(new EventPage() { BindingContext = new Models.User() });
+                await Navigation.PushAsync(new EventPage() { BindingContext = new Models.Eventos() });
             };
 
             ToolbarItems.Add(myToolbarItem);
         }
 
-        // Sobreescribe el método OnAppearing de la vista UserListPage
+        // Sobreescribe el método OnAppearing de la vista EventListPage
         protected async override void OnAppearing()
         {
             base.OnAppearing();
-
-            EventListView.ItemsSource = await App.UserDatabase.GetUsersAsync();
+            EventListView.ItemsSource = await App.UserDatabase.GetEventsAsync();
         }
 
         async void Event_ItemSelected(object sender, SelectedItemChangedEventArgs e)
