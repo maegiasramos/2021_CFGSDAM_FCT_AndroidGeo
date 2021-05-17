@@ -13,11 +13,10 @@
             <Label Text="Inicio de sesión"/>
             <Frame BackgroundColor="#BF043055" HasShadow="False">
                 <StackLayout Orientation="Vertical" Spacing="10">
-                    <Entry x:Name="Email" Text="{Binding Email}" Placeholder="abc@xyz.com"   
-                           PlaceholderColor="White" HeightRequest="40"   
-                           Keyboard="Email"  
+                    <Entry x:Name="Username" Placeholder="Nombre de usuario"   
+                           PlaceholderColor="White" HeightRequest="40"  
                            TextColor="White"/>
-                    <Entry x:Name="Password" Text="{Binding Password}" Placeholder="****"   
+                    <Entry x:Name="Password" Placeholder="Contraseña"   
                            PlaceholderColor="White" HeightRequest="40"   
                            IsPassword="True"  
                            TextColor="White"/>

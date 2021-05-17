@@ -62,11 +62,11 @@ namespace TareasXamarin
                 }
 
             }
-            catch(FeatureNotSupportedException notsupportedex)
+            catch(FeatureNotSupportedException)
             {
                 // TODO Añadir Toast que indique que esta función no está disponible en este dispositivo 
             }
-            catch(Exception ex)
+            catch(Exception)
             {
                 // TODO Añadir Toast que indique que algo salió mal
             }
@@ -88,11 +88,11 @@ namespace TareasXamarin
                 if (result.Any())
                     LocationName.Text = result.FirstOrDefault()?.FeatureName;
             }
-            catch (FeatureNotSupportedException notsupportedex)
+            catch (FeatureNotSupportedException)
             {
                 // TODO Añadir Toast que indique que esta función no está disponible en este dispositivo 
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 // TODO Añadir Toast que indique que algo salió mal
             }

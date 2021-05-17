@@ -1,7 +1,9 @@
 ﻿using System;
+using System.Threading.Tasks;
 using TareasXamarin.ViewModels;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using SQLite;
 
 namespace TareasXamarin.Views
 {
@@ -17,13 +19,21 @@ namespace TareasXamarin.Views
         // Método que se llamará al pulsar el botón
         async void LoginButton(object sender, EventArgs e)
         {
-            await LoginConfirmAsync((SelectedItemChangedEventArgs)e);
-        }
+            bool userExists = App.UserDatabase.GetExistingUser(Username.Text, Password.Text);
 
-        // Método que cambiará de página y comprobará si los datos de login son correctos (TODO)
-        private async System.Threading.Tasks.Task LoginConfirmAsync(SelectedItemChangedEventArgs e)
-        {
-            await Navigation.PushAsync(new EventPage() { BindingContext = e.SelectedItem as Models.Eventos });
+            if (userExists)
+            {
+                Models.User selectedUser = App.UserDatabase.GetSelectedUser(Username.Text, Password.Text);
+                Application.Current.Properties["LoggedUserID"] = selectedUser.UserID;
+
+                await Navigation.PushAsync(new Views.TabbedMenu());
+            }
+            else
+            {
+                // TODO Toast user not found
+                Console.WriteLine("Usuario no encontrado");
+            }
+
         }
     }
 }

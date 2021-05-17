@@ -77,5 +77,21 @@ namespace TareasXamarin
         {
             return database.DeleteAsync(evento);
         }
+
+        // Método para saber si existe un usuario con una contraseña concretos
+        public bool GetExistingUser(string user, string pass)
+        {
+            Task<int> existingUser = database.Table<Models.User>().Where(i => i.UserName == user && i.UserPassword == pass).CountAsync();
+
+            return (existingUser.Result > 0);
+        }
+
+        // Método para obtener el usuario escogido
+        public Models.User GetSelectedUser(string user, string pass)
+        {
+            Task<Models.User> selectedUser = database.Table<Models.User>().Where(i => i.UserName == user && i.UserPassword == pass).FirstOrDefaultAsync();
+
+            return selectedUser.Result;
+        }
     }
 }
