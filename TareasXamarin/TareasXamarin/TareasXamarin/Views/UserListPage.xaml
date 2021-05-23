@@ -6,7 +6,7 @@
         <ListView x:Name="UserListView" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" ItemSelected="User_ItemSelected">
             <ListView.ItemTemplate>
                 <DataTemplate>
-                    <TextCell Text="{Binding UserName}" Detail="{Binding UserID}"/>
+                    <TextCell Text="{Binding UserName}" TextColor="DodgerBlue" Detail="{Binding UserID}"/>
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>

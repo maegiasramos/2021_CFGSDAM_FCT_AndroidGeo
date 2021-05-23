@@ -2,19 +2,18 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="TareasXamarin.UserPage"
-             Title="Modificar usuario">
+             Title="Modificar usuario"
+             BackgroundImageSource="Users_Background.png">
     <ContentPage.Content>
         <StackLayout Padding="10" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
-            <Grid>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="Auto"/>
-                    <ColumnDefinition Width="*"/>
-                </Grid.ColumnDefinitions>
-                <Label Text="Nombre" Grid.Row="0" Grid.Column="0" HorizontalOptions="Start" VerticalOptions="Center"></Label>
-                <Entry Text="{Binding UserName}" Grid.Row="0" Grid.Column="1"/>
-                <Label Text="Contraseña" Grid.Row="1" Grid.Column="0" HorizontalOptions="Start" VerticalOptions="Center"></Label>
-                <Entry Text="{Binding UserPassword}" Grid.Row="1" Grid.Column="1"/>
-            </Grid>
+            <Frame BackgroundColor="#BF043055" HasShadow="False">
+                <StackLayout Orientation="Vertical" Spacing="10">
+                    <Label Text="Nombre:" HorizontalOptions="Start" TextColor="GhostWhite" FontAttributes="Bold" VerticalOptions="Center"></Label>
+                    <Entry Text="{Binding UserName}" TextColor="GhostWhite"/>
+                    <Label Text="Contraseña:" HorizontalOptions="Start" TextColor="GhostWhite" FontAttributes="Bold" VerticalOptions="Center"></Label>
+                    <Entry Text="{Binding UserPassword}" TextColor="GhostWhite"/>
+                </StackLayout>
+            </Frame>
             <Button Text="Guardar" HorizontalOptions="FillAndExpand" BackgroundColor="CornflowerBlue" TextColor="GhostWhite" Clicked="Save_Clicked"/>
             <Button Text="Eliminar" HorizontalOptions="FillAndExpand" BackgroundColor="CornflowerBlue" TextColor="GhostWhite" Clicked="Delete_Clicked"/>
             <Button Text="Cancelar" HorizontalOptions="FillAndExpand" BackgroundColor="CornflowerBlue" TextColor="GhostWhite" Clicked="Cancel_Clicked"/>

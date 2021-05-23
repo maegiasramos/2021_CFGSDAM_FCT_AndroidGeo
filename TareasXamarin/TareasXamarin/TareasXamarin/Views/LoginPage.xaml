@@ -6,25 +6,32 @@
              mc:Ignorable="d"
              x:Class="TareasXamarin.Views.LoginPage"
              Shell.NavBarIsVisible="False"
-             Title="Inicio de sesión">
+             Title="Inicio de sesión"
+             BackgroundImageSource="Login_Background.png">
     <ContentPage.Content>
-        <StackLayout Orientation="Vertical" Padding="30" Spacing="40">
-            <BoxView HeightRequest="10"/>
-            <Label Text="Inicio de sesión"/>
+        <StackLayout Orientation="Vertical" Padding="20" Spacing="10">
+            <Image Source="logo.png"
+               HeightRequest="120" WidthRequest="120"
+               HorizontalOptions="Center"/>
+            <Label Text="Introduce tu nombre de usuario y contraseña para acceder a la aplicación:" TextColor="Black" HorizontalTextAlignment="Center"/>
             <Frame BackgroundColor="#BF043055" HasShadow="False">
                 <StackLayout Orientation="Vertical" Spacing="10">
                     <Entry x:Name="Username" Placeholder="Nombre de usuario"   
-                           PlaceholderColor="White" HeightRequest="40"  
-                           TextColor="White"/>
+                           PlaceholderColor="GhostWhite" HeightRequest="40"  
+                           TextColor="GhostWhite"/>
                     <Entry x:Name="Password" Placeholder="Contraseña"   
-                           PlaceholderColor="White" HeightRequest="40"   
+                           PlaceholderColor="GhostWhite" HeightRequest="40"   
                            IsPassword="True"  
-                           TextColor="White"/>
+                           TextColor="GhostWhite"/>
                 </StackLayout>
             </Frame>
-            <Button Text="Login" TextColor="White" FontAttributes="Bold" 
+            <Button Text="Iniciar sesión" FontAttributes="Bold" 
                     FontSize="Large" HorizontalOptions="FillAndExpand" 
-                    BackgroundColor="#088da5" Clicked="LoginButton"/>
+                    BackgroundColor="CornflowerBlue" TextColor="GhostWhite" Clicked="LoginButton"/>
+            <Label Text="¿Aún no tienes una cuenta de usuario? Crea una nueva pulsando el botón de abajo." TextColor="Black" HorizontalTextAlignment="Center"/>
+            <Button Text="Registrarse" FontAttributes="Bold" 
+                    FontSize="Large" HorizontalOptions="FillAndExpand" 
+                    BackgroundColor="CornflowerBlue" TextColor="GhostWhite" Clicked="New_Account"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

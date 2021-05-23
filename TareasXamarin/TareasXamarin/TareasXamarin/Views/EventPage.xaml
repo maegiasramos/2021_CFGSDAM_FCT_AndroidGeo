@@ -2,32 +2,35 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="TareasXamarin.EventPage"
-             Title="Modificar evento">
+             Title="Modificar evento"
+             BackgroundImageSource="Events_Background.png">
     <ContentPage.Content>
         <StackLayout Padding="10" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
-            <Grid>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="Auto"/>
-                    <ColumnDefinition Width="*"/>
-                </Grid.ColumnDefinitions>
-                <Label Text="Nombre:" Grid.Row="0" Grid.Column="0" HorizontalOptions="Start" VerticalOptions="Center"></Label>
-                <Entry Text="{Binding EventName}" Grid.Row="0" Grid.Column="1"/>
-                
-                <Label Text="Descripción:" Grid.Row="1" Grid.Column="0" HorizontalOptions="Start" VerticalOptions="Center"></Label>
-                <Editor Text="{Binding EventDescription}" Grid.Row="1" Grid.Column="1" VerticalOptions="CenterAndExpand" AutoSize="TextChanges"/>
+            <Frame BackgroundColor="#BF043055" HasShadow="False">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Label Text="Nombre:" Grid.Row="0" Grid.Column="0" HorizontalOptions="Start" TextColor="GhostWhite" FontAttributes="Bold" VerticalOptions="Center"></Label>
+                    <Entry Text="{Binding EventName}" Grid.Row="0" Grid.Column="1" TextColor="GhostWhite"/>
 
-                <Label Text="ID Propietario:" Grid.Row="2" Grid.Column="0" HorizontalOptions="Start" VerticalOptions="Center"></Label>
-                <Label Text="{Binding OwnerID}" Grid.Row="2" Grid.Column="1" HorizontalOptions="Center" VerticalOptions="Center"></Label>
+                    <Label Text="Descripción:" Grid.Row="1" Grid.Column="0" HorizontalOptions="Start" TextColor="GhostWhite" FontAttributes="Bold" VerticalOptions="Center"></Label>
+                    <Editor Text="{Binding EventDescription}" Grid.Row="1" Grid.Column="1" VerticalOptions="CenterAndExpand" AutoSize="TextChanges" TextColor="GhostWhite"/>
 
-                <Label Text="Visibilidad:" Grid.Row="3" Grid.Column="0" HorizontalOptions="Start" VerticalOptions="Center"></Label>
-                <StackLayout Grid.Row="3" Grid.Column="1" HorizontalOptions="Center" VerticalOptions="Center">
-                    <RadioButton Content="Pública" GroupName="visibility" IsChecked="{Binding Visibility}"/>
-                    <RadioButton Content="Privada" GroupName="visibility" IsChecked="{Binding Visibility}"/>
-                </StackLayout>
+                    <Label Text="ID Propietario:" Grid.Row="2" Grid.Column="0" HorizontalOptions="Start" TextColor="GhostWhite" FontAttributes="Bold" VerticalOptions="Center"></Label>
+                    <Label Text="{Binding OwnerID}" Grid.Row="2" Grid.Column="1" HorizontalOptions="Center" VerticalOptions="Center" TextColor="GhostWhite"></Label>
 
-                <Label Text="Nombre ubicación:" Grid.Row="4" Grid.Column="0" HorizontalOptions="Start" VerticalOptions="Center"></Label>
-                <Entry x:Name="LocationName" Text="{Binding Coordinates}" Grid.Row="4" Grid.Column="1"/>
-            </Grid>
+                    <Label Text="Visibilidad:" Grid.Row="3" Grid.Column="0" HorizontalOptions="Start" TextColor="GhostWhite" FontAttributes="Bold" VerticalOptions="Center"></Label>
+                    <StackLayout Grid.Row="3" Grid.Column="1" HorizontalOptions="Center" VerticalOptions="Center">
+                        <RadioButton Content="Pública" GroupName="visibility" TextColor="GhostWhite" IsChecked="{Binding Visibility}"/>
+                        <RadioButton Content="Privada" GroupName="visibility" TextColor="GhostWhite" IsChecked="{Binding Visibility}"/>
+                    </StackLayout>
+
+                    <Label Text="Nombre ubicación:" Grid.Row="4" Grid.Column="0" HorizontalOptions="Start" TextColor="GhostWhite" FontAttributes="Bold" VerticalOptions="Center"></Label>
+                    <Entry x:Name="LocationName" Text="{Binding Coordinates}" Grid.Row="4" Grid.Column="1" TextColor="GhostWhite"/>
+                </Grid>
+            </Frame>
             <Button Text="Ver ubicación en mapa" HorizontalOptions="FillAndExpand" BackgroundColor="CornflowerBlue" TextColor="GhostWhite" Clicked="Geocoding_Method"/>
             <Button Text="Guardar" HorizontalOptions="FillAndExpand" BackgroundColor="CornflowerBlue" TextColor="GhostWhite" Clicked="Save_Clicked"/>
             <Button Text="Eliminar" HorizontalOptions="FillAndExpand" BackgroundColor="CornflowerBlue" TextColor="GhostWhite" Clicked="Delete_Clicked"/>

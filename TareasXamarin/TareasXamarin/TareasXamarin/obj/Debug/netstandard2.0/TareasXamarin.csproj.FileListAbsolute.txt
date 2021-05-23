@@ -2,7 +2,6 @@ C:\Users\ZororoWhite\Desktop\2021_CFGSDAM_FCT_AndroidGeo\TareasXamarin\TareasXam
 C:\Users\ZororoWhite\Desktop\2021_CFGSDAM_FCT_AndroidGeo\TareasXamarin\TareasXamarin\TareasXamarin\bin\Debug\netstandard2.0\TareasXamarin.dll
 C:\Users\ZororoWhite\Desktop\2021_CFGSDAM_FCT_AndroidGeo\TareasXamarin\TareasXamarin\TareasXamarin\bin\Debug\netstandard2.0\ref\TareasXamarin.dll
 C:\Users\ZororoWhite\Desktop\2021_CFGSDAM_FCT_AndroidGeo\TareasXamarin\TareasXamarin\TareasXamarin\bin\Debug\netstandard2.0\TareasXamarin.pdb
-C:\Users\ZororoWhite\Desktop\2021_CFGSDAM_FCT_AndroidGeo\TareasXamarin\TareasXamarin\TareasXamarin\obj\Debug\netstandard2.0\TareasXamarin.csprojAssemblyReference.cache
 C:\Users\ZororoWhite\Desktop\2021_CFGSDAM_FCT_AndroidGeo\TareasXamarin\TareasXamarin\TareasXamarin\obj\Debug\netstandard2.0\App.xaml.g.cs
 C:\Users\ZororoWhite\Desktop\2021_CFGSDAM_FCT_AndroidGeo\TareasXamarin\TareasXamarin\TareasXamarin\obj\Debug\netstandard2.0\AppShell.xaml.g.cs
 C:\Users\ZororoWhite\Desktop\2021_CFGSDAM_FCT_AndroidGeo\TareasXamarin\TareasXamarin\TareasXamarin\obj\Debug\netstandard2.0\Views\AboutPage.xaml.g.cs
@@ -23,3 +22,12 @@ C:\Users\ZororoWhite\Desktop\2021_CFGSDAM_FCT_AndroidGeo\TareasXamarin\TareasXam
 C:\Users\ZororoWhite\Desktop\2021_CFGSDAM_FCT_AndroidGeo\TareasXamarin\TareasXamarin\TareasXamarin\obj\Debug\netstandard2.0\TareasXamarin.dll
 C:\Users\ZororoWhite\Desktop\2021_CFGSDAM_FCT_AndroidGeo\TareasXamarin\TareasXamarin\TareasXamarin\obj\Debug\netstandard2.0\ref\TareasXamarin.dll
 C:\Users\ZororoWhite\Desktop\2021_CFGSDAM_FCT_AndroidGeo\TareasXamarin\TareasXamarin\TareasXamarin\obj\Debug\netstandard2.0\TareasXamarin.pdb
+C:\Users\ZororoWhite\Desktop\2021_CFGSDAM_FCT_AndroidGeo\TareasXamarin\TareasXamarin\TareasXamarin\bin\Debug\netstandard2.0\Mono.Android.dll
+C:\Users\ZororoWhite\Desktop\2021_CFGSDAM_FCT_AndroidGeo\TareasXamarin\TareasXamarin\TareasXamarin\bin\Debug\netstandard2.0\Xamarin.Forms.Platform.Android.dll
+C:\Users\ZororoWhite\Desktop\2021_CFGSDAM_FCT_AndroidGeo\TareasXamarin\TareasXamarin\TareasXamarin\bin\Debug\netstandard2.0\FormsViewGroup.dll
+C:\Users\ZororoWhite\Desktop\2021_CFGSDAM_FCT_AndroidGeo\TareasXamarin\TareasXamarin\TareasXamarin\bin\Debug\netstandard2.0\Mono.Android.pdb
+C:\Users\ZororoWhite\Desktop\2021_CFGSDAM_FCT_AndroidGeo\TareasXamarin\TareasXamarin\TareasXamarin\bin\Debug\netstandard2.0\Mono.Android.xml
+C:\Users\ZororoWhite\Desktop\2021_CFGSDAM_FCT_AndroidGeo\TareasXamarin\TareasXamarin\TareasXamarin\bin\Debug\netstandard2.0\Xamarin.Forms.Platform.Android.pdb
+C:\Users\ZororoWhite\Desktop\2021_CFGSDAM_FCT_AndroidGeo\TareasXamarin\TareasXamarin\TareasXamarin\bin\Debug\netstandard2.0\FormsViewGroup.pdb
+C:\Users\ZororoWhite\Desktop\2021_CFGSDAM_FCT_AndroidGeo\TareasXamarin\TareasXamarin\TareasXamarin\obj\Debug\netstandard2.0\TareasXamarin.csproj.CopyComplete
+C:\Users\ZororoWhite\Desktop\2021_CFGSDAM_FCT_AndroidGeo\TareasXamarin\TareasXamarin\TareasXamarin\obj\Debug\netstandard2.0\TareasXamarin.csprojAssemblyReference.cache
