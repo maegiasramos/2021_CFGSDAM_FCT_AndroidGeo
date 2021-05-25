@@ -20,9 +20,10 @@ namespace TareasXamarin.Views
         async void LoginButton(object sender, EventArgs e)
         {
             bool userExists = App.UserDatabase.GetExistingUser(Username.Text, Password.Text);
-            
+
             // Comprueba que los campos de usuario y contraseña NO estén vacíos
-            if(Username.Text != null && Password.Text != null)
+            // if (Username.Text != null && Password.Text != null)
+            if (!String.IsNullOrEmpty(Username.Text) && !String.IsNullOrEmpty(Password.Text))
             {
                 // Pasa a comprobar si usuario y contraseña introducidos existen ya
                 if (userExists)
@@ -48,6 +49,8 @@ namespace TareasXamarin.Views
         // Método que permite crear un nuevo usuario desde la pantalla de login
         async void New_Account(object sender, EventArgs e)
         {
+            // Accede a la página de usuario en modo Nuevo Usuario
+            Application.Current.Properties["UserMode"] = "New";
             await Navigation.PushAsync(new UserPage() { BindingContext = new Models.User() });
         }
     }

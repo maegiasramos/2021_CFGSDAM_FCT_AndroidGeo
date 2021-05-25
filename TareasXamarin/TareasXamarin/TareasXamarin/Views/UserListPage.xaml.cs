@@ -22,8 +22,11 @@ namespace TareasXamarin
                 Text = "+"
             };
 
+            // Listener al pulsar el botón de Añadir usuario ("+")
             myToolbarItem.Clicked += async (sender, e) =>
             {
+                // Coloca el modo en Nuevo usuario al acceder desde el botón +
+                Application.Current.Properties["UserMode"] = "New";
                 await Navigation.PushAsync(new UserPage() { BindingContext = new Models.User() });
             };
 
@@ -42,6 +45,8 @@ namespace TareasXamarin
         {
             if(e.SelectedItem != null)
             {
+                // Coloca el modo en modificar al acceder desde la lista de usuarios.
+                Application.Current.Properties["UserMode"] = "Modify";
                 await Navigation.PushAsync(new UserPage() { BindingContext = e.SelectedItem as Models.User });
             }
         }

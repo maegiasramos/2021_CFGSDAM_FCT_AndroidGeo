@@ -16,6 +16,9 @@ namespace TareasXamarin
         public EventPage()
         {
             InitializeComponent();
+
+            // Asignamos el ID actual al campo de texto de ID Propietario
+            Owner.Text = Application.Current.Properties["LoggedUserID"].ToString();
         }
 
         // Método asociado al botón de guardar evento
@@ -26,7 +29,7 @@ namespace TareasXamarin
             // Guarda el usuario en la base de datos
             await App.UserDatabase.SaveEventAsync(eventItem);
             // Navega de nuevo a la ventana de lista de usuarios
-            await Navigation.PopAsync(); 
+            await Navigation.PopAsync();
         }
 
         // Método asociado al botón de cancelar

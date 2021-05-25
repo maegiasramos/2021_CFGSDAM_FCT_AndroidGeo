@@ -19,7 +19,7 @@
                     <Editor Text="{Binding EventDescription}" Grid.Row="1" Grid.Column="1" VerticalOptions="CenterAndExpand" AutoSize="TextChanges" TextColor="GhostWhite"/>
 
                     <Label Text="ID Propietario:" Grid.Row="2" Grid.Column="0" HorizontalOptions="Start" TextColor="GhostWhite" FontAttributes="Bold" VerticalOptions="Center"></Label>
-                    <Label Text="{Binding OwnerID}" Grid.Row="2" Grid.Column="1" HorizontalOptions="Center" VerticalOptions="Center" TextColor="GhostWhite"></Label>
+                    <Label x:Name="Owner" Text="{Binding OwnerID}" Grid.Row="2" Grid.Column="1" HorizontalOptions="Center" VerticalOptions="Center" TextColor="GhostWhite"></Label>
 
                     <Label Text="Visibilidad:" Grid.Row="3" Grid.Column="0" HorizontalOptions="Start" TextColor="GhostWhite" FontAttributes="Bold" VerticalOptions="Center"></Label>
                     <StackLayout Grid.Row="3" Grid.Column="1" HorizontalOptions="Center" VerticalOptions="Center">

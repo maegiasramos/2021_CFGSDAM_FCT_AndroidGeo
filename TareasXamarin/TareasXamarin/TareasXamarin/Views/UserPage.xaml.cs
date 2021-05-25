@@ -15,6 +15,17 @@ namespace TareasXamarin
         public UserPage()
         {
             InitializeComponent();
+
+            // Comprueba si el Usuario accede para crear uno nuevo o modificar uno existente
+            // con objetivo de cambiar el título de la ventana
+            if(Application.Current.Properties["UserMode"].ToString().Equals("New"))
+            {
+                Title = "Nuevo usuario";
+            }
+            else if(Application.Current.Properties["UserMode"].ToString().Equals("Modify"))
+            {
+                Title = "Modificar usuario";
+            }
         }
 
         // Método asociado al botón de guardar usuario
