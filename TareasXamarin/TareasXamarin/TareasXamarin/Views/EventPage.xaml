@@ -22,10 +22,18 @@
                     <Label x:Name="Owner" Text="{Binding OwnerID}" Grid.Row="2" Grid.Column="1" HorizontalOptions="Center" VerticalOptions="Center" TextColor="GhostWhite"></Label>
 
                     <Label Text="Visibilidad:" Grid.Row="3" Grid.Column="0" HorizontalOptions="Start" TextColor="GhostWhite" FontAttributes="Bold" VerticalOptions="Center"></Label>
-                    <StackLayout Grid.Row="3" Grid.Column="1" HorizontalOptions="Center" VerticalOptions="Center">
-                        <RadioButton Content="Pública" GroupName="visibility" TextColor="GhostWhite" IsChecked="{Binding Visibility}"/>
-                        <RadioButton Content="Privada" GroupName="visibility" TextColor="GhostWhite" IsChecked="{Binding Visibility}"/>
-                    </StackLayout>
+                    <Picker x:Name="Visibility"
+                            Grid.Row="3" Grid.Column="1"
+                            HorizontalOptions="FillAndExpand"
+                            TextColor="GhostWhite"
+                            SelectedIndex="{Binding Visibility}">
+                        <Picker.ItemsSource>
+                            <x:Array Type="{x:Type x:String}">
+                                <x:String>Pública</x:String>
+                            <x:String>Privada</x:String>
+                        </x:Array>
+                        </Picker.ItemsSource>
+                    </Picker>
 
                     <Label Text="Nombre ubicación:" Grid.Row="4" Grid.Column="0" HorizontalOptions="Start" TextColor="GhostWhite" FontAttributes="Bold" VerticalOptions="Center"></Label>
                     <Entry x:Name="LocationName" Text="{Binding Coordinates}" Grid.Row="4" Grid.Column="1" TextColor="GhostWhite"/>

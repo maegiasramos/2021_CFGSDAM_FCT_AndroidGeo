@@ -652,4 +652,3 @@ C:\Users\ZororoWhite\Desktop\2021_CFGSDAM_FCT_AndroidGeo\TareasXamarin\TareasXam
 C:\Users\ZororoWhite\Desktop\2021_CFGSDAM_FCT_AndroidGeo\TareasXamarin\TareasXamarin\TareasXamarin.Android\obj\Debug\110\res\drawable\logo.png
 C:\Users\ZororoWhite\Desktop\2021_CFGSDAM_FCT_AndroidGeo\TareasXamarin\TareasXamarin\TareasXamarin.Android\obj\Debug\110\res\drawable\events_background.png
 C:\Users\ZororoWhite\Desktop\2021_CFGSDAM_FCT_AndroidGeo\TareasXamarin\TareasXamarin\TareasXamarin.Android\obj\Debug\110\res\drawable\users_background.png
-C:\Users\ZororoWhite\Desktop\2021_CFGSDAM_FCT_AndroidGeo\TareasXamarin\TareasXamarin\TareasXamarin.Android\obj\Debug\110\android\src\crc649a404c15c798b166\Toast_Android.java
