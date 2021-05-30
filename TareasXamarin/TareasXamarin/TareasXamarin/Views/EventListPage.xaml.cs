@@ -24,6 +24,8 @@ namespace TareasXamarin
 
             myToolbarItem.Clicked += async (sender, e) =>
             {
+                // Colocamos el modo de acceso a la pestaña de eventos como Nuevo evento
+                Application.Current.Properties["EventMode"] = "New";
                 await Navigation.PushAsync(new EventPage() { BindingContext = new Models.Eventos() });
             };
 
@@ -41,6 +43,20 @@ namespace TareasXamarin
         {
             if(e.SelectedItem != null)
             {
+                // Colocamos el modo de acceso a la pestaña de eventos como Modificar evento
+                Application.Current.Properties["EventMode"] = "Modify";
+
+                // Obtenemos la visibilidad y el ID de Propietario del Evento seleccionado para controlar su acceso y modificación
+                var retrievedObject = e.SelectedItem as Models.Eventos;
+                var visibility = retrievedObject.Visibility;
+                var ownerID = retrievedObject.OwnerID;
+                // Guardamos la visibilidad y el ID de Propietario en Propiedades de la App para
+                // poder realizar comprobaciones en la pestaña del Evento
+                Application.Current.Properties["VisibilityMode"] = visibility;
+                Application.Current.Properties["EventOwnerID"] = ownerID;
+
+                //Console.WriteLine(Application.Current.Properties["VisibilityMode"].ToString());
+
                 await Navigation.PushAsync(new EventPage() { BindingContext = e.SelectedItem as Models.Eventos });
             }
         }

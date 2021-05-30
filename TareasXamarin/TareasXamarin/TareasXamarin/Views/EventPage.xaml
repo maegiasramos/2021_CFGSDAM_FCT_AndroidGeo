@@ -2,7 +2,7 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="TareasXamarin.EventPage"
-             Title="Modificar evento"
+             Title="Crear/Modificar evento"
              BackgroundImageSource="Events_Background.png">
     <ContentPage.Content>
         <StackLayout Padding="10" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
@@ -19,7 +19,7 @@
                     <Editor Text="{Binding EventDescription}" Grid.Row="1" Grid.Column="1" VerticalOptions="CenterAndExpand" AutoSize="TextChanges" TextColor="GhostWhite"/>
 
                     <Label Text="ID Propietario:" Grid.Row="2" Grid.Column="0" HorizontalOptions="Start" TextColor="GhostWhite" FontAttributes="Bold" VerticalOptions="Center"></Label>
-                    <Label x:Name="Owner" Text="{Binding OwnerID}" Grid.Row="2" Grid.Column="1" HorizontalOptions="Center" VerticalOptions="Center" TextColor="GhostWhite"></Label>
+                    <Label x:Name="Owner" Text="{Binding OwnerID, StringFormat='{0}'}" Grid.Row="2" Grid.Column="1" HorizontalOptions="Center" VerticalOptions="Center" TextColor="GhostWhite"></Label>
 
                     <Label Text="Visibilidad:" Grid.Row="3" Grid.Column="0" HorizontalOptions="Start" TextColor="GhostWhite" FontAttributes="Bold" VerticalOptions="Center"></Label>
                     <Picker x:Name="Visibility"
@@ -39,7 +39,7 @@
                     <Entry x:Name="LocationName" Text="{Binding Coordinates}" Grid.Row="4" Grid.Column="1" TextColor="GhostWhite"/>
                 </Grid>
             </Frame>
-            <Button Text="Ver ubicación en mapa" HorizontalOptions="FillAndExpand" BackgroundColor="CornflowerBlue" TextColor="GhostWhite" Clicked="Geocoding_Method"/>
+            <Button x:Name ="LocationButton" Text="Ver ubicación en mapa" HorizontalOptions="FillAndExpand" BackgroundColor="CornflowerBlue" TextColor="GhostWhite" Clicked="Geocoding_Method"/>
             <Button Text="Guardar" HorizontalOptions="FillAndExpand" BackgroundColor="CornflowerBlue" TextColor="GhostWhite" Clicked="Save_Clicked"/>
             <Button Text="Eliminar" HorizontalOptions="FillAndExpand" BackgroundColor="CornflowerBlue" TextColor="GhostWhite" Clicked="Delete_Clicked"/>
             <Button Text="Cancelar" HorizontalOptions="FillAndExpand" BackgroundColor="CornflowerBlue" TextColor="GhostWhite" Clicked="Cancel_Clicked"/>

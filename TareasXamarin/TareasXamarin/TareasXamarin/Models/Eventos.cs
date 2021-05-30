@@ -25,7 +25,7 @@ namespace TareasXamarin.Models
             set;
         }
 
-        public int OwnerID 
+        public string OwnerID 
         { 
             get; 
             set; 

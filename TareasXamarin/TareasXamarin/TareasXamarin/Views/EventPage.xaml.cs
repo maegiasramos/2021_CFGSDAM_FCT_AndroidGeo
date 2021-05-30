@@ -17,8 +17,43 @@ namespace TareasXamarin
         {
             InitializeComponent();
 
-            // Asignamos el ID actual al campo de texto de ID Propietario
-            Owner.Text = Application.Current.Properties["LoggedUserID"].ToString();
+            // Comprobamos el modo en el que se accede a esta pestaña (Nuevo evento o modificar)
+            if (Application.Current.Properties["EventMode"].ToString().Equals("New"))
+            {
+                Title = "Nuevo evento";
+
+                // Asignamos el ID actual al campo de texto de ID Propietario
+                Owner.Text = Application.Current.Properties["LoggedUserID"].ToString();
+            }
+            else if (Application.Current.Properties["EventMode"].ToString().Equals("Modify"))
+            {
+                Title = "Modificar evento";
+
+                // Comprobamos visibilidad del evento (Público=0, Privado=1 a nivel interno de objeto en BD)
+                if (Application.Current.Properties["VisibilityMode"].ToString().Equals("0"))
+                {
+                    Console.WriteLine("Este evento es PÚBLICO.");
+                }
+                else if (Application.Current.Properties["VisibilityMode"].ToString().Equals("1"))
+                {
+                    Console.WriteLine("Este evento es PRIVADO.");
+                    // Comprobamos si el ID Propietario coincide con el ID del usuario actualmente conectado en caso de ser PRIVADO
+                    if (Application.Current.Properties["LoggedUserID"].ToString().Equals(Application.Current.Properties["EventOwnerID"].ToString()))
+                    {
+                        Console.WriteLine("Tienes permiso para editar este evento!");
+                    }
+                    else
+                    {
+                        Console.WriteLine("[!!!] NO TIENES PERMISO PARA EDITAR ESTE EVENTO");
+
+                        // TODO Deshabilitamos entradas de texto y botones para evitar que pueda modificar pero que pueda ver el contenido del Evento
+                        Visibility.IsEnabled = false;
+                        LocationName.IsEnabled = false;
+                        LocationButton.IsEnabled = false;
+                    }
+                }
+
+            }
         }
 
         // Método asociado al botón de guardar evento
@@ -26,6 +61,10 @@ namespace TareasXamarin
         {
             // Crea un objeto de tipo Evento y le pasa los valores introducidos
             var eventItem = (Models.Eventos)BindingContext;
+            // En caso de que estemos creando un nuevo Evento, guarda el ID de su propietario.
+            // En caso de que ya exista, no se sobreescribirá.
+            if (Application.Current.Properties["EventMode"].ToString().Equals("New"))
+                eventItem.OwnerID = Application.Current.Properties["LoggedUserID"].ToString();
             // Guarda el usuario en la base de datos
             await App.UserDatabase.SaveEventAsync(eventItem);
             // Navega de nuevo a la ventana de lista de usuarios
