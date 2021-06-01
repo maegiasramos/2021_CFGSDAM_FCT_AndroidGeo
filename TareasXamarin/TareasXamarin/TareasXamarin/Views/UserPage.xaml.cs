@@ -21,6 +21,8 @@ namespace TareasXamarin
             if(Application.Current.Properties["UserMode"].ToString().Equals("New"))
             {
                 Title = "Nuevo usuario";
+                // Desactivamos el botón de Eliminar usuario al crear uno nuevo (ya que no tiene sentido)
+                DeleteButton.IsEnabled = false;
             }
             else if(Application.Current.Properties["UserMode"].ToString().Equals("Modify"))
             {
@@ -31,12 +33,21 @@ namespace TareasXamarin
         // Método asociado al botón de guardar usuario
         async void Save_Clicked(object sender, EventArgs e)
         {
-            // Crea un objeto de tipo User y le pasa los valores introducidos
-            var personItem = (Models.User)BindingContext;
-            // Guarda el usuario en la base de datos
-            await App.UserDatabase.SaveUserAsync(personItem);
-            // Navega de nuevo a la ventana de lista de usuarios
-            await Navigation.PopAsync();
+            if (!String.IsNullOrEmpty(UsernameEntry.Text) && !String.IsNullOrEmpty(PasswordEntry.Text))
+            {
+                // Crea un objeto de tipo User y le pasa los valores introducidos
+                var personItem = (Models.User)BindingContext;
+                // Guarda el usuario en la base de datos
+                await App.UserDatabase.SaveUserAsync(personItem);
+                // Navega de nuevo a la ventana de lista de usuarios
+                await Navigation.PopAsync();
+            }
+            else
+            {
+                // TODO Cambiar por Toast
+                Console.WriteLine("Debes rellenar todos los campos para poder guardar el usuario.");
+            }
+            
         }
 
         // Método asociado al botón de cancelar

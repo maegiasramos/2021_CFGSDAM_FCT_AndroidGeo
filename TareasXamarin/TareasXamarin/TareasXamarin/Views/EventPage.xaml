@@ -6,22 +6,22 @@
              BackgroundImageSource="Events_Background.png">
     <ContentPage.Content>
         <StackLayout Padding="10" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
-            <Frame BackgroundColor="#BF043055" HasShadow="False">
+            <Frame x:Name="BackColor" BackgroundColor="#BF043055" HasShadow="False">
                 <Grid>
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="Auto"/>
                         <ColumnDefinition Width="*"/>
                     </Grid.ColumnDefinitions>
-                    <Label Text="Nombre:" Grid.Row="0" Grid.Column="0" HorizontalOptions="Start" TextColor="GhostWhite" FontAttributes="Bold" VerticalOptions="Center"></Label>
-                    <Entry Text="{Binding EventName}" Grid.Row="0" Grid.Column="1" TextColor="GhostWhite"/>
+                    <Label x:Name="NameLabel" Text="Nombre:" Grid.Row="0" Grid.Column="0" HorizontalOptions="Start" TextColor="GhostWhite" FontAttributes="Bold" VerticalOptions="Center"></Label>
+                    <Entry x:Name="Name" Text="{Binding EventName}" Grid.Row="0" Grid.Column="1" TextColor="GhostWhite"/>
 
-                    <Label Text="Descripción:" Grid.Row="1" Grid.Column="0" HorizontalOptions="Start" TextColor="GhostWhite" FontAttributes="Bold" VerticalOptions="Center"></Label>
-                    <Editor Text="{Binding EventDescription}" Grid.Row="1" Grid.Column="1" VerticalOptions="CenterAndExpand" AutoSize="TextChanges" TextColor="GhostWhite"/>
+                    <Label x:Name="DescriptionLabel" Text="Descripción:" Grid.Row="1" Grid.Column="0" HorizontalOptions="Start" TextColor="GhostWhite" FontAttributes="Bold" VerticalOptions="Center"></Label>
+                    <Editor x:Name="Description" Text="{Binding EventDescription}" Grid.Row="1" Grid.Column="1" VerticalOptions="CenterAndExpand" AutoSize="TextChanges" TextColor="GhostWhite"/>
 
-                    <Label Text="ID Propietario:" Grid.Row="2" Grid.Column="0" HorizontalOptions="Start" TextColor="GhostWhite" FontAttributes="Bold" VerticalOptions="Center"></Label>
+                    <Label x:Name="OwnerLabel" Text="ID Propietario:" Grid.Row="2" Grid.Column="0" HorizontalOptions="Start" TextColor="GhostWhite" FontAttributes="Bold" VerticalOptions="Center"></Label>
                     <Label x:Name="Owner" Text="{Binding OwnerID, StringFormat='{0}'}" Grid.Row="2" Grid.Column="1" HorizontalOptions="Center" VerticalOptions="Center" TextColor="GhostWhite"></Label>
 
-                    <Label Text="Visibilidad:" Grid.Row="3" Grid.Column="0" HorizontalOptions="Start" TextColor="GhostWhite" FontAttributes="Bold" VerticalOptions="Center"></Label>
+                    <Label x:Name="VisibilityLabel" Text="Visibilidad:" Grid.Row="3" Grid.Column="0" HorizontalOptions="Start" TextColor="GhostWhite" FontAttributes="Bold" VerticalOptions="Center"></Label>
                     <Picker x:Name="Visibility"
                             Grid.Row="3" Grid.Column="1"
                             HorizontalOptions="FillAndExpand"
@@ -35,14 +35,14 @@
                         </Picker.ItemsSource>
                     </Picker>
 
-                    <Label Text="Nombre ubicación:" Grid.Row="4" Grid.Column="0" HorizontalOptions="Start" TextColor="GhostWhite" FontAttributes="Bold" VerticalOptions="Center"></Label>
+                    <Label x:Name="LocationLabel" Text="Nombre ubicación:" Grid.Row="4" Grid.Column="0" HorizontalOptions="Start" TextColor="GhostWhite" FontAttributes="Bold" VerticalOptions="Center"></Label>
                     <Entry x:Name="LocationName" Text="{Binding Coordinates}" Grid.Row="4" Grid.Column="1" TextColor="GhostWhite"/>
                 </Grid>
             </Frame>
             <Button x:Name ="LocationButton" Text="Ver ubicación en mapa" HorizontalOptions="FillAndExpand" BackgroundColor="CornflowerBlue" TextColor="GhostWhite" Clicked="Geocoding_Method"/>
-            <Button Text="Guardar" HorizontalOptions="FillAndExpand" BackgroundColor="CornflowerBlue" TextColor="GhostWhite" Clicked="Save_Clicked"/>
-            <Button Text="Eliminar" HorizontalOptions="FillAndExpand" BackgroundColor="CornflowerBlue" TextColor="GhostWhite" Clicked="Delete_Clicked"/>
-            <Button Text="Cancelar" HorizontalOptions="FillAndExpand" BackgroundColor="CornflowerBlue" TextColor="GhostWhite" Clicked="Cancel_Clicked"/>
+            <Button x:Name ="SaveButton" Text="Guardar" HorizontalOptions="FillAndExpand" BackgroundColor="CornflowerBlue" TextColor="GhostWhite" Clicked="Save_Clicked"/>
+            <Button x:Name ="DeleteButton" Text="Eliminar" HorizontalOptions="FillAndExpand" BackgroundColor="CornflowerBlue" TextColor="GhostWhite" Clicked="Delete_Clicked"/>
+            <Button Text="Volver" HorizontalOptions="FillAndExpand" BackgroundColor="CornflowerBlue" TextColor="GhostWhite" Clicked="Cancel_Clicked"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
