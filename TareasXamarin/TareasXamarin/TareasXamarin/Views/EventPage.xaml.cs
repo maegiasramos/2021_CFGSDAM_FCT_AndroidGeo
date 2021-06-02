@@ -34,15 +34,11 @@ namespace TareasXamarin
                 // Comprobamos visibilidad del evento (Público=0, Privado=1 a nivel interno de objeto en BD)
                 if (Application.Current.Properties["VisibilityMode"].ToString().Equals("1"))
                 {
-                    Console.WriteLine("Este evento es PRIVADO.");
                     // Comprobamos si el ID Propietario coincide con el ID del usuario actualmente conectado en caso de ser PRIVADO
-                    if (Application.Current.Properties["LoggedUserID"].ToString().Equals(Application.Current.Properties["EventOwnerID"].ToString()))
+                    if (!Application.Current.Properties["LoggedUserID"].ToString().Equals(Application.Current.Properties["EventOwnerID"].ToString()))
                     {
-                        Console.WriteLine("Tienes permiso para editar este evento!");
-                    }
-                    else
-                    {
-                        Console.WriteLine("[!!!] NO TIENES PERMISO PARA EDITAR ESTE EVENTO");
+                        // Toast aviso de Evento privado y usuario sin permisos sobre el mismo
+                        DependencyService.Get<ToastInterface>().Show("Este evento es Privado. No tienes permisos para modificarlo.");
 
                         // Deshabilitamos entradas de texto y botones para evitar que pueda modificar pero que pueda ver el contenido del Evento
                         Name.IsEnabled = false;
@@ -87,14 +83,14 @@ namespace TareasXamarin
                 }
                 else
                 {
-                    // TODO Cambiar por Toast
-                    Console.WriteLine("Selecciona una visibilidad para el evento.");
+                    // Toast error sin seleccionar visibilidad
+                    DependencyService.Get<ToastInterface>().Show("Por favor, selecciona la visibilidad del evento.");
                 }
             }
             else
             {
-                // TODO Cambiar por Toast
-                Console.WriteLine("Debes rellenar todos los campos para poder guardar el evento.");
+                // Toast campos en blanco
+                DependencyService.Get<ToastInterface>().Show("Debes rellenar todos los campos para poder guardar el evento.");
             }
             
         }
@@ -136,45 +132,21 @@ namespace TareasXamarin
                 }
                 catch (FeatureNotSupportedException)
                 {
-                    // TODO Añadir Toast que indique que esta función no está disponible en este dispositivo 
+                    // Toast que indica que esta función no está disponible en este dispositivo 
+                    DependencyService.Get<ToastInterface>().Show("Error: función no disponible en este dispositivo.");
                 }
                 catch (Exception)
                 {
-                    // TODO Añadir Toast que indique que algo salió mal
+                    // Toast que indica que algo salió mal
+                    DependencyService.Get<ToastInterface>().Show("Algo salió mal. Por favor, inténtalo de nuevo.");
                 }
             }
             else
             {
-                // TODO Cambiar por Toast
-                Console.WriteLine("Debes introducir una ubicación antes de buscar en el mapa.");
+                // Toast rellenar ubicación
+                DependencyService.Get<ToastInterface>().Show("Debes introducir una ubicación antes de buscar en el mapa.");
             }
             
         }
-
-        /* Método que obtiene el nombre de la ubicación a partir de las coordenadas de un punto con Geocoding
-        async void ReverseGeocoding_Method(object sender, EventArgs e)
-        {
-            try
-            {
-                double lat;
-                double lng;
-
-                lat = Convert.ToDouble(LocationName.Text.Split(',')[0]);
-                lng = Convert.ToDouble(LocationName.Text.Split(',')[1]);
-
-                var result = await Geocoding.GetPlacemarksAsync(lat, lng);
-
-                if (result.Any())
-                    LocationName.Text = result.FirstOrDefault()?.FeatureName;
-            }
-            catch (FeatureNotSupportedException)
-            {
-                // TODO Añadir Toast que indique que esta función no está disponible en este dispositivo 
-            }
-            catch (Exception)
-            {
-                // TODO Añadir Toast que indique que algo salió mal
-            }
-        }*/
     }
 }

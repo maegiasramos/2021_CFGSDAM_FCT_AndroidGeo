@@ -44,8 +44,8 @@ namespace TareasXamarin
             }
             else
             {
-                // TODO Cambiar por Toast
-                Console.WriteLine("Debes rellenar todos los campos para poder guardar el usuario.");
+                // Toast campos en blanco
+                DependencyService.Get<ToastInterface>().Show("Debes rellenar todos los campos para poder guardar el usuario.");
             }
             
         }

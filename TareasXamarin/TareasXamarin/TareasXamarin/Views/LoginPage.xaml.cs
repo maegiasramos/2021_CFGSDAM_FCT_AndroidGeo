@@ -35,14 +35,14 @@ namespace TareasXamarin.Views
                 }
                 else
                 {
-                    // TODO Toast user not found
-                    Console.WriteLine("No se ha podido conectar correctamente. Por favor, inténtelo de nuevo.");
+                    // Toast usuario no encontrado
+                    DependencyService.Get<ToastInterface>().Show("No se ha podido conectar correctamente. Por favor, inténtalo de nuevo.");
                 }
             }
             else
             {
-                // TODO Toast empty field
-                Console.WriteLine("No puedes dejar campos en blanco. Inténtalo de nuevo rellenando los datos.");
+                // Toast campos vacíos
+                DependencyService.Get<ToastInterface>().Show("No puedes dejar campos en blanco. Inténtalo de nuevo rellenando los datos.");
             }
         }
 
