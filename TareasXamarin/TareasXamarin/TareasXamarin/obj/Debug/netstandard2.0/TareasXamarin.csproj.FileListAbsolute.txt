@@ -30,3 +30,4 @@ C:\Users\ZororoWhite\Desktop\2021_CFGSDAM_FCT_AndroidGeo\TareasXamarin\TareasXam
 C:\Users\ZororoWhite\Desktop\2021_CFGSDAM_FCT_AndroidGeo\TareasXamarin\TareasXamarin\TareasXamarin\bin\Debug\netstandard2.0\Xamarin.Forms.Platform.Android.pdb
 C:\Users\ZororoWhite\Desktop\2021_CFGSDAM_FCT_AndroidGeo\TareasXamarin\TareasXamarin\TareasXamarin\bin\Debug\netstandard2.0\FormsViewGroup.pdb
 C:\Users\ZororoWhite\Desktop\2021_CFGSDAM_FCT_AndroidGeo\TareasXamarin\TareasXamarin\TareasXamarin\obj\Debug\netstandard2.0\TareasXamarin.csproj.CopyComplete
+C:\Users\ZororoWhite\Desktop\2021_CFGSDAM_FCT_AndroidGeo\TareasXamarin\TareasXamarin\TareasXamarin\obj\Debug\netstandard2.0\TareasXamarin.csprojAssemblyReference.cache

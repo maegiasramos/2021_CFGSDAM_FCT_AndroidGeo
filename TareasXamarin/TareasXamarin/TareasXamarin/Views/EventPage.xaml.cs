@@ -45,7 +45,6 @@ namespace TareasXamarin
                         Description.IsEnabled = false;
                         Visibility.IsEnabled = false;
                         LocationName.IsEnabled = false;
-                        LocationButton.IsEnabled = false;
                         SaveButton.IsEnabled = false;
                         DeleteButton.IsEnabled = false;
 

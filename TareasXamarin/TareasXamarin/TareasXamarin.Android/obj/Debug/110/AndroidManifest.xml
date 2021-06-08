@@ -17,7 +17,7 @@
   <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
   <uses-permission android:name="android.permission.INTERNET" />
   <application android:label="TareasXamarin.Android" android:theme="@style/MainTheme" android:name="android.app.Application" android:allowBackup="true" android:icon="@mipmap/icon" android:debuggable="true" android:extractNativeLibs="true">
-    <meta-data android:name="com.google.android.geo.API_KEY" android:value="AIzaSyDxmm6QxBkK5HeZ9GLgSg8vjl_or6orm9g" />
+    <meta-data android:name="com.google.android.geo.API_KEY" android:value="AIzaSyDzvC5tIpwXG00_2E9rRez9U8NopNjUL44" />
     <uses-library android:name="org.apache.http.legacy" android:required="false" />
     <activity android:configChanges="orientation|smallestScreenSize|screenLayout|screenSize|uiMode" android:icon="@mipmap/icon" android:label="TareasXamarin" android:theme="@style/MainTheme" android:name="crc649a404c15c798b166.MainActivity">
       <intent-filter>
